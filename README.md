@@ -1,10 +1,11 @@
 # Deploying an Angular application within nginx:alpine docker
 
 ## Dockerizing the app
-docker build -t YOUR_TAG .
+export TAG="YOUR_TAG"
+docker build -t "$TAG" .
 
 ## Publishing the app to ghcr.io
-docker tag IMAGE_ID ghcr.io/USERNAME/YOUR_TAG:latest
+docker tag $(docker image ls | grep "$TAG" | awk '{print $3}') ghcr.io/USERNAME/YOUR_TAG:latest
 
 docker push ghcr.io/USERNAME/YOUR_TAG:latest
 
