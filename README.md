@@ -5,6 +5,7 @@ docker build -t YOUR_TAG .
 
 ## Publishing the app to ghcr.io
 docker tag IMAGE_ID ghcr.io/USERNAME/YOUR_TAG:latest
+
 docker push ghcr.io/USERNAME/YOUR_TAG:latest
 
 ## Notes
