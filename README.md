@@ -2,6 +2,7 @@
 
 ## Dockerizing the app
 export TAG="YOUR_TAG"
+
 docker build -t "$TAG" .
 
 ## Publishing the app to ghcr.io
